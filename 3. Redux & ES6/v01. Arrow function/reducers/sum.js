@@ -1,5 +1,5 @@
 //sub-reducer
-function sum(currentState, action){
+var sum = (currentState, action) => {
   var DEFAULT_STATE = 3;
   if(currentState === undefined){ // look at Note 1.1
     nextState = DEFAULT_STATE; // Note 1.2

@@ -1,4 +1,4 @@
-function images(currentState, action){
+var images = (currentState, action) => {
     var DEFAULT_STATE = {data:[], loading:"Please click the 'Random Images' button"};
     var nextState = Object.assign({},currentState);
     if (currentState === undefined) { // look at to Note 1.1

@@ -1,8 +1,8 @@
-const decrease = () => ({type: 'DECREMENT'});
-const increment = () => ({type: 'INCREMENT'});
-const getSum = (a,b) => ({ type: 'SUM', a: a, b: b});
+var decrease = () => ({type: 'DECREMENT'});
+var increment = () => ({type: 'INCREMENT'});
+var getSum = (a,b) => ({ type: 'SUM', a: a, b: b});
 // ASYNC
-const asyncIncrease = (dispatch, state) => {
+var asyncIncrease = (dispatch, state) => {
 	dispatch({type: 'INCREMENT_LOADING'});
     _fakeServerApi.increaseCount(state.count.result,
         function(data){
@@ -11,7 +11,7 @@ const asyncIncrease = (dispatch, state) => {
     );
 };
 
-const getRandomImages = (dispatch, state) => {
+var getRandomImages = (dispatch, state) => {
 	dispatch({type: 'IMAGES_LOADING'});
 	var imgurAPI = 'https://api.imgur.com/3/gallery/random/random/1';
 	$.getJSON(imgurAPI).done(data => {
